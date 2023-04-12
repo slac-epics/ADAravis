@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2230
-y 567
+x 1967
+y 297
 w 400
 h 345
 font "helvetica-bold-r-12.0"
@@ -462,7 +462,7 @@ buttonLabel "             Model Specific        "
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "usbScreens/camModel.edl"
+  0 "vimbaCamScreens/camModel.edl"
 }
 setPosition {
   0 "button"

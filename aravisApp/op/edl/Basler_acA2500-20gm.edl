@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 713
-y 157
+x 2458
+y 233
 w 420
 h 820
 font "helvetica-bold-r-12.0"
@@ -40,7 +40,6 @@ topShadowColor index 1
 botShadowColor index 11
 displaySource "file"
 file "areaDetectorScreens/ADBase.edl"
-sizeOfs 0
 numDsps 0
 noScroll
 endObjectProperties
@@ -54,14 +53,13 @@ release 0
 x 4
 y 480
 w 408
-h 112
+h 300
 fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
 displaySource "file"
-file "vimbaScreens/vimbaCamera.edl"
-sizeOfs 0
+file "aravisScreens/aravisCamera.edl"
 numDsps 0
 noScroll
 endObjectProperties
@@ -85,9 +83,10 @@ buttonLabel "more features..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "vimbaScreens/Basler_acA2500-20gm-features.edl"
+  0 "aravisScreens/Basler_acA2500-20gm-features.edl"
 }
 setPosition {
   0 "parentWindow"
 }
 endObjectProperties
+
