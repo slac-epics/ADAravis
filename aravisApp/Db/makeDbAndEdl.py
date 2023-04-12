@@ -161,17 +161,17 @@ print '  field(PINI,  "YES")'
 print '}'
 print
 print 'record(stringin, "$(P)$(R)CamModelScreen") {'
-print '  field(VAL,   "vimbaScreens/%s")' % camera_name
+print '  field(VAL,   "aravisScreens/%s")' % camera_name
 print '  field(PINI,  "YES")'
 print '}'
 print
 print 'record(stringin, "$(P)$(R)CamType") {'
-print '  field(VAL,   "$(TYPE=vimba)")'
+print '  field(VAL,   "$(TYPE=aravis)")'
 print '  field(PINI,  "YES")'
 print '}'
 print
 print 'record(stringin, "$(P)$(R)CamTypeScreen") {'
-print '  field(VAL,   "vimbaScreens/$(TYPE=vimba)CamType.edl")'
+print '  field(VAL,   "aravisScreens/$(TYPE=aravis)CamType.edl")'
 print '  field(PINI,  "YES")'
 print '}'
 print
@@ -409,7 +409,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "vimbaScreens/vimbaHelp.edl"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -855,7 +855,7 @@ bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
 displaySource "file"
-file "vimbaScreens/vimbaCamera.edl"
+file "aravisScreens/aravisCamera.edl"
 sizeOfs 0
 numDsps 0
 noScroll
@@ -880,7 +880,7 @@ buttonLabel "more features..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "vimbaScreens/%(camera_name)s-features.edl"
+  0 "aravisScreens/%(camera_name)s-features.edl"
 }
 setPosition {
   0 "parentWindow"

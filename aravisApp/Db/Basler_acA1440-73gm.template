@@ -12,17 +12,17 @@ record(stringin, "$(P)$(R)CamModel") {
 }
 
 record(stringin, "$(P)$(R)CamModelScreen") {
-  field(VAL,   "vimbaScreens/Basler_acA1440-73gm")
+  field(VAL,   "aravisScreens/Basler_acA1440-73gm")
   field(PINI,  "YES")
 }
 
 record(stringin, "$(P)$(R)CamType") {
-  field(VAL,   "$(TYPE=vimba)")
+  field(VAL,   "$(TYPE=aravis)")
   field(PINI,  "YES")
 }
 
 record(stringin, "$(P)$(R)CamTypeScreen") {
-  field(VAL,   "vimbaScreens/$(TYPE=vimba)CamType.edl")
+  field(VAL,   "aravisScreens/$(TYPE=aravis)CamType.edl")
   field(PINI,  "YES")
 }
 
