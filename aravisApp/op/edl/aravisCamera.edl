@@ -3,13 +3,13 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1246
-y 481
+x 1828
+y 280
 w 390
 h 350
-font "arial-bold-r-12.0"
-ctlFont "arial-bold-r-12.0"
-btnFont "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 textColor index 14
@@ -78,9 +78,9 @@ minor 1
 release 1
 x 5
 y 5
-w 58
-h 13
-font "arial-medium-r-12.0"
+w 60
+h 14
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 5
 value {
@@ -90,7 +90,7 @@ autoSize
 border
 endObjectProperties
 
-# (Textupdate)
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -105,7 +105,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -119,7 +119,7 @@ x 10
 y 25
 w 75
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -128,7 +128,7 @@ value {
 }
 endObjectProperties
 
-# (Textupdate)
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -143,7 +143,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -157,7 +157,7 @@ x 10
 y 50
 w 75
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -166,7 +166,7 @@ value {
 }
 endObjectProperties
 
-# (Textupdate)
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -181,7 +181,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -195,7 +195,7 @@ x 10
 y 75
 w 75
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -227,7 +227,7 @@ x 10
 y 25
 w 175
 h 70
-font "arial-bold-r-18.0"
+font "helvetica-medium-r-18.0"
 fontAlign "center"
 fgColor index 20
 bgColor index 0
@@ -292,7 +292,7 @@ pressValue "1"
 onLabel "Reconnect"
 offLabel "Reconnect"
 3d
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -305,7 +305,7 @@ x 205
 y 75
 w 85
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -328,7 +328,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -336,7 +336,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -380,7 +380,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)ARHWImageMode"
 indicatorPv "$(P)$(R)ARHWImageMode_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -393,7 +393,7 @@ x 205
 y 50
 w 85
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -416,7 +416,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -424,7 +424,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -468,7 +468,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)ARLeftShift"
 indicatorPv "$(P)$(R)ARLeftShift_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Related Display)
@@ -485,7 +485,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -493,7 +493,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -513,7 +513,7 @@ x 205
 y 25
 w 85
 h 20
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -581,9 +581,9 @@ minor 1
 release 1
 x 200
 y 130
-w 64
-h 13
-font "arial-medium-r-12.0"
+w 68
+h 14
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 5
@@ -604,7 +604,7 @@ x 215
 y 145
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -630,7 +630,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)ExposureAuto"
 indicatorPv "$(P)$(R)ExposureAuto_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -643,7 +643,7 @@ x 215
 y 170
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -652,25 +652,57 @@ value {
 }
 endObjectProperties
 
-# (Textentry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 7
 release 0
 x 285
 y 170
 w 45
-h 20
+h 25
 controlPv "$(P)$(R)GC_ExpAutoTarget"
+font "helvetica-bold-r-12.0"
+fontAlign "center"
 fgColor index 25
 fgAlarm
-bgColor index 3
-fill
-font "arial-bold-r-12.0"
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
 endObjectProperties
 
-# (Textupdate)
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 285
+y 170
+w 45
+h 25
+controlPv "$(P)$(R)GC_ExpAutoTarget"
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 25
+fgAlarm
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
+endObjectProperties
+
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -685,7 +717,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -712,9 +744,9 @@ minor 1
 release 1
 x 5
 y 130
-w 40
-h 13
-font "arial-medium-r-12.0"
+w 42
+h 14
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 5
@@ -735,7 +767,7 @@ x 20
 y 145
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -761,7 +793,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)GainAuto"
 indicatorPv "$(P)$(R)GainAuto_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -774,7 +806,7 @@ x 20
 y 170
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -783,25 +815,32 @@ value {
 }
 endObjectProperties
 
-# (Textentry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 7
 release 0
 x 90
 y 170
 w 45
-h 20
+h 25
 controlPv "$(P)$(R)GC_GainAutoTarget"
+font "helvetica-bold-r-12.0"
+fontAlign "center"
 fgColor index 25
 fgAlarm
-bgColor index 3
-fill
-font "arial-bold-r-12.0"
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
 endObjectProperties
 
-# (Textupdate)
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -816,7 +855,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -843,9 +882,9 @@ minor 1
 release 1
 x 5
 y 205
-w 67
-h 13
-font "arial-medium-r-12.0"
+w 69
+h 14
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 5
@@ -866,7 +905,7 @@ x 20
 y 220
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -892,7 +931,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)GC_BalanceWhiteAuto"
 indicatorPv "$(P)$(R)GC_BalanceWhiteAuto_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -905,7 +944,7 @@ x 20
 y 245
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -931,7 +970,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)GC_BalRatioSelector"
 indicatorPv "$(P)$(R)GC_BalRatioSelector_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -944,7 +983,7 @@ x 20
 y 270
 w 65
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -953,25 +992,32 @@ value {
 }
 endObjectProperties
 
-# (Textentry)
-object TextentryClass
+# (Text Control)
+object activeXTextDspClass
 beginObjectProperties
-major 10
-minor 0
+major 4
+minor 7
 release 0
 x 90
 y 270
 w 45
-h 20
+h 25
 controlPv "$(P)$(R)GC_BalanceRatioAbs"
+font "helvetica-bold-r-12.0"
+fontAlign "center"
 fgColor index 25
 fgAlarm
-bgColor index 3
-fill
-font "arial-bold-r-12.0"
+bgColor index 5
+editable
+motifWidget
+limitsFromDb
+nullColor index 40
+smartRefresh
+useHexPrefix
+newPos
 endObjectProperties
 
-# (Textupdate)
+# (Text Update)
 object TextupdateClass
 beginObjectProperties
 major 10
@@ -986,7 +1032,7 @@ fgColor index 16
 fgAlarm
 bgColor index 10
 fill
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 endObjectProperties
 
@@ -1004,7 +1050,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1012,7 +1058,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1036,7 +1082,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1044,7 +1090,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1068,7 +1114,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1076,7 +1122,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1100,7 +1146,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1108,7 +1154,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1132,7 +1178,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1140,7 +1186,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1164,7 +1210,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1172,7 +1218,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1196,7 +1242,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1204,7 +1250,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1228,7 +1274,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 xPosOffset -100
 yPosOffset -85
 useFocus
@@ -1236,7 +1282,7 @@ buttonLabel "?"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "aravisHelp"
+  0 "aravisScreens/aravisHelp.edl"
 }
 setPosition {
   0 "button"
@@ -1256,7 +1302,7 @@ x 215
 y 220
 w 110
 h 20
-font "arial-bold-r-10.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -1282,7 +1328,7 @@ topShadowColor index 1
 botShadowColor index 11
 controlPv "$(P)$(R)TriggerSource"
 indicatorPv "$(P)$(R)TriggerSource_RBV"
-font "arial-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -1293,9 +1339,9 @@ minor 1
 release 1
 x 200
 y 205
-w 53
-h 13
-font "arial-medium-r-12.0"
+w 55
+h 14
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 5

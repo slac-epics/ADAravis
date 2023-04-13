@@ -538,8 +538,8 @@ bgColor index 5
 inconsistentColor index 40
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P)$(R)ConvertPixelFormat"
-indicatorPv "$(P)$(R)ConvertPixelFormat_RBV"
+controlPv "$(P)$(R)ARConvertPixelFormat"
+indicatorPv "$(P)$(R)ARConvertPixelFormat_RBV"
 font "helvetica-medium-r-12.0"
 endObjectProperties
 
