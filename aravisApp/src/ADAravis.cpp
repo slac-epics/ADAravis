@@ -1014,6 +1014,7 @@ static const iocshArg * const ADAravisConfigArgs[] =  {&ADAravisConfigArg0,
 static const iocshFuncDef configADAravis = {"aravisConfig", 6, ADAravisConfigArgs};
 static void configADAravisCallFunc(const iocshArgBuf *args)
 {
+    arv_debug_enable(getenv("ARV_DEBUG"));
     ADAravisConfig(args[0].sval, args[1].sval, args[2].ival, 
                    args[3].ival, args[4].ival, args[5].ival);
 }
@@ -1021,7 +1022,6 @@ static void configADAravisCallFunc(const iocshArgBuf *args)
 
 static void ADAravisRegister(void)
 {
-
     iocshRegister(&configADAravis, configADAravisCallFunc);
 }
 

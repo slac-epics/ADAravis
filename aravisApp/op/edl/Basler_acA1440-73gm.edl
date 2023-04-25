@@ -3,9 +3,9 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 713
-y 157
-w 420
+x 2107
+y 182
+w 863
 h 820
 font "helvetica-bold-r-12.0"
 ctlFont "helvetica-bold-r-12.0"
@@ -40,7 +40,6 @@ topShadowColor index 1
 botShadowColor index 11
 displaySource "file"
 file "areaDetectorScreens/ADBase.edl"
-sizeOfs 0
 numDsps 0
 noScroll
 endObjectProperties
@@ -54,14 +53,13 @@ release 0
 x 4
 y 480
 w 408
-h 112
+h 300
 fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 11
 displaySource "file"
 file "aravisScreens/aravisCamera.edl"
-sizeOfs 0
 numDsps 0
 noScroll
 endObjectProperties
@@ -91,3 +89,4 @@ setPosition {
   0 "parentWindow"
 }
 endObjectProperties
+

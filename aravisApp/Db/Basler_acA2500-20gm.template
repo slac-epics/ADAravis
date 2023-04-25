@@ -1403,62 +1403,6 @@ record(ao, "$(P)$(R)GC_ShaEnhancementRaw") {
   info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
 }
 
-record(bi, "$(P)$(R)GC_VigCorEnable_RBV") {
-  field(DTYP, "asynInt32")
-  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_VignettingCorrectionEnable")
-  field(SCAN, "I/O Intr")
-  field(ZNAM, "No")
-  field(ONAM, "Yes")
-  field(DISA, "0")
-  info( autosaveFields, "DESC ZSV OSV TSE" )
-}
-
-record(bo, "$(P)$(R)GC_VigCorEnable") {
-  field(DTYP, "asynInt32")
-  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_VignettingCorrectionEnable")
-  field(ZNAM, "No")
-  field(ONAM, "Yes")
-  field(DISA, "0")
-  info( autosaveFields, "DESC ZSV OSV TSE PINI VAL" )
-}
-
-record(longout, "$(P)$(R)GC_VigCorStore") {
-  field(DTYP, "asynInt32")
-  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_VignettingCorrectionStore")
-  field(DISA, "0")
-  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
-}
-
-record(ai, "$(P)$(R)GC_VigCorIndex_RBV") {
-  field(DTYP, "asynInt64")
-  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_VignettingCorrectionIndex")
-  field(SCAN, "I/O Intr")
-  field(DISA, "0")
-  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
-}
-
-record(ao, "$(P)$(R)GC_VigCorIndex") {
-  field(DTYP, "asynInt64")
-  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_VignettingCorrectionIndex")
-  field(DISA, "0")
-  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
-}
-
-record(ai, "$(P)$(R)GC_VigCorValue_RBV") {
-  field(DTYP, "asynInt64")
-  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_VignettingCorrectionValue")
-  field(SCAN, "I/O Intr")
-  field(DISA, "0")
-  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
-}
-
-record(ao, "$(P)$(R)GC_VigCorValue") {
-  field(DTYP, "asynInt64")
-  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_VignettingCorrectionValue")
-  field(DISA, "0")
-  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
-}
-
 record(bi, "$(P)$(R)GC_EnaBurAcquisition_RBV") {
   field(DTYP, "asynInt32")
   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_EnableBurstAcquisition")
@@ -2155,6 +2099,8 @@ record(mbbi, "$(P)$(R)GC_LineSource_RBV") {
   field(TVVL, "12")
   field(TTST, "SyncUserOutput3")
   field(TTVL, "13")
+  field(FTST, "BslLightControl")
+  field(FTVL, "14")
   field(SCAN, "I/O Intr")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
@@ -2192,6 +2138,8 @@ record(mbbo, "$(P)$(R)GC_LineSource") {
   field(TVVL, "12")
   field(TTST, "SyncUserOutput3")
   field(TTVL, "13")
+  field(FTST, "BslLightControl")
+  field(FTVL, "14")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
 }
@@ -3126,6 +3074,408 @@ record(longout, "$(P)$(R)GC_CounterReset") {
   info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
 }
 
+record(mbbi, "$(P)$(R)GC_BslLigControlMode_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlMode")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "On")
+  field(ONVL, "1")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigControlMode") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlMode")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "On")
+  field(ONVL, "1")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigConSource_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlSource")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Line3")
+  field(ONVL, "1")
+  field(TWST, "Line4")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigConSource") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlSource")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Line3")
+  field(ONVL, "1")
+  field(TWST, "Line4")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(longout, "$(P)$(R)GC_BslLigConEnuDev") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_BslLightControlEnumerateDevices")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigConStatus_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlStatus")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Idle")
+  field(ONVL, "1")
+  field(TWST, "Searching")
+  field(TWVL, "2")
+  field(THST, "Updating")
+  field(THVL, "3")
+  field(FRST, "Ready")
+  field(FRVL, "4")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigConStatus") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlStatus")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Idle")
+  field(ONVL, "1")
+  field(TWST, "Searching")
+  field(TWVL, "2")
+  field(THST, "Updating")
+  field(THVL, "3")
+  field(FRST, "Ready")
+  field(FRVL, "4")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigConErrSta_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlErrorStatus")
+  field(ZRST, "NoError")
+  field(ZRVL, "0")
+  field(ONST, "Device1")
+  field(ONVL, "1")
+  field(TWST, "Device2")
+  field(TWVL, "2")
+  field(THST, "Device3")
+  field(THVL, "3")
+  field(FRST, "Device4")
+  field(FRVL, "4")
+  field(FVST, "MultipleDevices")
+  field(FVVL, "5")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigConErrSta") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightControlErrorStatus")
+  field(DOL,  "0")
+  field(ZRST, "NoError")
+  field(ZRVL, "0")
+  field(ONST, "Device1")
+  field(ONVL, "1")
+  field(TWST, "Device2")
+  field(TWVL, "2")
+  field(THST, "Device3")
+  field(THVL, "3")
+  field(FRST, "Device4")
+  field(FRVL, "4")
+  field(FVST, "MultipleDevices")
+  field(FVVL, "5")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigDevSelector_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceSelector")
+  field(ZRST, "Device1")
+  field(ZRVL, "0")
+  field(ONST, "Device2")
+  field(ONVL, "1")
+  field(TWST, "Device3")
+  field(TWVL, "2")
+  field(THST, "Device4")
+  field(THVL, "3")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigDevSelector") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceSelector")
+  field(DOL,  "0")
+  field(ZRST, "Device1")
+  field(ZRVL, "0")
+  field(ONST, "Device2")
+  field(ONVL, "1")
+  field(TWST, "Device3")
+  field(TWVL, "2")
+  field(THST, "Device4")
+  field(THVL, "3")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevMaxCur_RBV") {
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceMaxCurrent")
+  field(PREC, "3")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevMaxCur") {
+  field(DTYP, "asynFloat64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceMaxCurrent")
+  field(PREC, "3")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevMaxCurRa_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceMaxCurrentRaw")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevMaxCurRa") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceMaxCurrentRaw")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevBri_RBV") {
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceBrightness")
+  field(PREC, "3")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevBri") {
+  field(DTYP, "asynFloat64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceBrightness")
+  field(PREC, "3")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevBriRaw_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceBrightnessRaw")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevBriRaw") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceBrightnessRaw")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigDevOpeMode_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceOperationMode")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "On")
+  field(ONVL, "1")
+  field(TWST, "Strobe")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigDevOpeMode") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceOperationMode")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "On")
+  field(ONVL, "1")
+  field(TWST, "Strobe")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigDevStrMode_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceStrobeMode")
+  field(ZRST, "Manual")
+  field(ZRVL, "0")
+  field(ONST, "Automatic")
+  field(ONVL, "1")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigDevStrMode") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceStrobeMode")
+  field(DOL,  "0")
+  field(ZRST, "Manual")
+  field(ZRVL, "0")
+  field(ONST, "Automatic")
+  field(ONVL, "1")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevStrDur_RBV") {
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceStrobeDuration")
+  field(PREC, "3")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevStrDur") {
+  field(DTYP, "asynFloat64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_BslLightDeviceStrobeDuration")
+  field(PREC, "3")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BslLigDevStrDurRa_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceStrobeDurationRaw")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_BslLigDevStrDurRa") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BslLightDeviceStrobeDurationRaw")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigDevLasError_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceLastError")
+  field(ZRST, "NoError")
+  field(ZRVL, "0")
+  field(ONST, "Communication")
+  field(ONVL, "1")
+  field(TWST, "Connection")
+  field(TWVL, "2")
+  field(THST, "Hardware")
+  field(THVL, "3")
+  field(FRST, "InsufficientCurr")
+  field(FRVL, "4")
+  field(FVST, "ShortCircuit")
+  field(FVVL, "5")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigDevLasError") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceLastError")
+  field(DOL,  "0")
+  field(ZRST, "NoError")
+  field(ZRVL, "0")
+  field(ONST, "Communication")
+  field(ONVL, "1")
+  field(TWST, "Connection")
+  field(TWVL, "2")
+  field(THST, "Hardware")
+  field(THVL, "3")
+  field(FRST, "InsufficientCurr")
+  field(FRVL, "4")
+  field(FVST, "ShortCircuit")
+  field(FVVL, "5")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(longout, "$(P)$(R)GC_BslLigDevCleLasEr") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_BslLightDeviceClearLastError")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(mbbi, "$(P)$(R)GC_BslLigDevChangeID_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceChangeID")
+  field(ZRST, "Device1")
+  field(ZRVL, "0")
+  field(ONST, "Device2")
+  field(ONVL, "1")
+  field(TWST, "Device3")
+  field(TWVL, "2")
+  field(THST, "Device4")
+  field(THVL, "3")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BslLigDevChangeID") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BslLightDeviceChangeID")
+  field(DOL,  "0")
+  field(ZRST, "Device1")
+  field(ZRVL, "0")
+  field(ONST, "Device2")
+  field(ONVL, "1")
+  field(TWST, "Device3")
+  field(TWVL, "2")
+  field(THST, "Device4")
+  field(THVL, "3")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(stringin, "$(P)$(R)GC_BslLigDevFirVer_RBV") {
+  field(DTYP, "asynOctetRead")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_S_BslLightDeviceFirmwareVersion")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC TSE" )
+}
+
 record(mbbi, "$(P)$(R)GC_LUTSelector_RBV") {
   field(DTYP, "asynInt32")
   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_LUTSelector")
@@ -3611,6 +3961,51 @@ record(longout, "$(P)$(R)GC_DevRegStrEnd") {
   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_DeviceRegistersStreamingEnd")
   field(DISA, "0")
   info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ai, "$(P)$(R)GC_DevSFNCVerMajor_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionMajor")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_DevSFNCVerMajor") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionMajor")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_DevSFNCVerMinor_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionMinor")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_DevSFNCVerMinor") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionMinor")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_DevSFNCVerSubMin_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionSubMinor")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_DevSFNCVerSubMin") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_DeviceSFNCVersionSubMinor")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
 }
 
 record(ai, "$(P)$(R)GC_ChunkStride_RBV") {
@@ -5360,6 +5755,8 @@ record(mbbi, "$(P)$(R)GC_FileSelector_RBV") {
   field(SVVL, "36")
   field(EIST, "ExpertFeature7Fi")
   field(EIVL, "74")
+  field(NIST, "VignettingCorrec")
+  field(NIVL, "127")
   field(SCAN, "I/O Intr")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
@@ -5387,6 +5784,8 @@ record(mbbo, "$(P)$(R)GC_FileSelector") {
   field(SVVL, "36")
   field(EIST, "ExpertFeature7Fi")
   field(EIVL, "74")
+  field(NIST, "VignettingCorrec")
+  field(NIVL, "127")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
 }
@@ -5638,6 +6037,21 @@ record(ao, "$(P)$(R)GC_AutExpTimAbsLowLi") {
   info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL" )
 }
 
+record(ai, "$(P)$(R)GC_AutExpTimLowLimRa_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_AutoExposureTimeLowerLimitRaw")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_AutExpTimLowLimRa") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_AutoExposureTimeLowerLimitRaw")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
 record(ai, "$(P)$(R)GC_AutExpTimAbsUppLi_RBV") {
   field(DTYP, "asynFloat64")
   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_D_AutoExposureTimeAbsUpperLimit")
@@ -5653,6 +6067,21 @@ record(ao, "$(P)$(R)GC_AutExpTimAbsUppLi") {
   field(PREC, "3")
   field(DISA, "0")
   info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PREC PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_AutExpTimUppLimRa_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_AutoExposureTimeUpperLimitRaw")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_AutExpTimUppLimRa") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_AutoExposureTimeUpperLimitRaw")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
 }
 
 record(mbbi, "$(P)$(R)GC_AutFunProfile_RBV") {
@@ -5889,6 +6318,8 @@ record(mbbi, "$(P)$(R)GC_ExpFeaAccSelector_RBV") {
   field(NIVL, "14")
   field(TEST, "ExpertFeature10")
   field(TEVL, "15")
+  field(ELST, "ExpertFeature11")
+  field(ELVL, "16")
   field(SCAN, "I/O Intr")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
@@ -5920,6 +6351,8 @@ record(mbbo, "$(P)$(R)GC_ExpFeaAccSelector") {
   field(NIVL, "14")
   field(TEST, "ExpertFeature10")
   field(TEVL, "15")
+  field(ELST, "ExpertFeature11")
+  field(ELVL, "16")
   field(DISA, "0")
   info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
 }
@@ -5956,5 +6389,250 @@ record(bo, "$(P)$(R)GC_ExpFeatureEnable") {
   field(ONAM, "Yes")
   field(DISA, "0")
   info( autosaveFields, "DESC ZSV OSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerPortSource_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortSource")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Line3")
+  field(ONVL, "1")
+  field(TWST, "Line4")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerPortSource") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortSource")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Line3")
+  field(ONVL, "1")
+  field(TWST, "Line4")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerPorBaudRate_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortBaudRate")
+  field(ZRST, "Baud115200")
+  field(ZRVL, "0")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerPorBaudRate") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortBaudRate")
+  field(DOL,  "0")
+  field(ZRST, "Baud115200")
+  field(ZRVL, "0")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerPorStopBits_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortStopBits")
+  field(ZRST, "StopBits0")
+  field(ZRVL, "0")
+  field(ONST, "StopBits1")
+  field(ONVL, "1")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerPorStopBits") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortStopBits")
+  field(DOL,  "0")
+  field(ZRST, "StopBits0")
+  field(ZRVL, "0")
+  field(ONST, "StopBits1")
+  field(ONVL, "1")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerPortParity_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortParity")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Odd")
+  field(ONVL, "1")
+  field(TWST, "Even")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerPortParity") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialPortParity")
+  field(DOL,  "0")
+  field(ZRST, "Off")
+  field(ZRVL, "0")
+  field(ONST, "Odd")
+  field(ONVL, "1")
+  field(TWST, "Even")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BLCSerPorTraValue_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BLCSerialPortTransmitValue")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_BLCSerPorTraValue") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BLCSerialPortTransmitValue")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(longout, "$(P)$(R)GC_BLCSerPorTraCmd") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_BLCSerialPortTransmitCmd")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerTraQueSta_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialTransmitQueueStatus")
+  field(ZRST, "Empty")
+  field(ZRVL, "0")
+  field(ONST, "Filled")
+  field(ONVL, "1")
+  field(TWST, "Full")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerTraQueSta") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialTransmitQueueStatus")
+  field(DOL,  "0")
+  field(ZRST, "Empty")
+  field(ZRVL, "0")
+  field(ONST, "Filled")
+  field(ONVL, "1")
+  field(TWST, "Full")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(ai, "$(P)$(R)GC_BLCSerPorRecValue_RBV") {
+  field(DTYP, "asynInt64")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BLCSerialPortReceiveValue")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(ao, "$(P)$(R)GC_BLCSerPorRecValue") {
+  field(DTYP, "asynInt64")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_I_BLCSerialPortReceiveValue")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE PINI VAL" )
+}
+
+record(longout, "$(P)$(R)GC_BLCSerPorRecCmd") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_BLCSerialPortReceiveCmd")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
+}
+
+record(mbbi, "$(P)$(R)GC_BLCSerRecQueSta_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialReceiveQueueStatus")
+  field(ZRST, "Empty")
+  field(ZRVL, "0")
+  field(ONST, "Filled")
+  field(ONVL, "1")
+  field(TWST, "Full")
+  field(TWVL, "2")
+  field(SCAN, "I/O Intr")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE" )
+}
+
+record(mbbo, "$(P)$(R)GC_BLCSerRecQueSta") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_E_BLCSerialReceiveQueueStatus")
+  field(DOL,  "0")
+  field(ZRST, "Empty")
+  field(ZRVL, "0")
+  field(ONST, "Filled")
+  field(ONVL, "1")
+  field(TWST, "Full")
+  field(TWVL, "2")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZRSV ONSV TWSV THSV FRSV FVSV SXSV SVSV EISV NISV TESV ELSV TVSV TTSV FTSV FFSV TSE PINI VAL" )
+}
+
+record(bi, "$(P)$(R)GC_BLCSerFraError_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_BLCSerialFramingError")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "No")
+  field(ONAM, "Yes")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZSV OSV TSE" )
+}
+
+record(bo, "$(P)$(R)GC_BLCSerFraError") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_BLCSerialFramingError")
+  field(ZNAM, "No")
+  field(ONAM, "Yes")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZSV OSV TSE PINI VAL" )
+}
+
+record(bi, "$(P)$(R)GC_BLCSerParityError_RBV") {
+  field(DTYP, "asynInt32")
+  field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_BLCSerialParityError")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "No")
+  field(ONAM, "Yes")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZSV OSV TSE" )
+}
+
+record(bo, "$(P)$(R)GC_BLCSerParityError") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_B_BLCSerialParityError")
+  field(ZNAM, "No")
+  field(ONAM, "Yes")
+  field(DISA, "0")
+  info( autosaveFields, "DESC ZSV OSV TSE PINI VAL" )
+}
+
+record(longout, "$(P)$(R)GC_BLCSerPorCleErr") {
+  field(DTYP, "asynInt32")
+  field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))GC_C_BLCSerialPortClearErrors")
+  field(DISA, "0")
+  info( autosaveFields, "DESC LOLO LOW HIGH HIHI LLSV LSV HSV HHSV EGU TSE" )
 }
 
