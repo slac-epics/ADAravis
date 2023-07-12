@@ -70,7 +70,7 @@ ifeq (lcls,$(findstring lcls,$(EPICS_BASE)))
 		BR_VERSION	= buildroot-2019.08-x86_64
 		PKG_ARCH	= $(BR_VERSION)
 	endif
-	ARAVISPREFIX	= $(PACKAGE_SITE_TOP)/aravis/0.4.1_1/$(PKG_ARCH)
+	ARAVISPREFIX	= $(PACKAGE_SITE_TOP)/aravis/0.8.1/$(PKG_ARCH)
 	GLIBPREFIX		= $(PACKAGE_SITE_TOP)/glib/2.52.0/$(PKG_ARCH)
 	FFI_TOP			= $(PACKAGE_SITE_TOP)/libffi/3.2.1/$(PKG_ARCH)
 	PCRE_TOP		= $(PACKAGE_SITE_TOP)/pcre/8.37/$(PKG_ARCH)
