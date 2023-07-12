@@ -1,0 +1,11 @@
+
+#==============================================================
+RELEASE_NOTES for ADAravis
+#==============================================================
+
+R2.2.1.20-1.0.1  11-Jul-2023  M. Dunning (mdunning)
+    Update Makefile so that external packages are used instead of system libraries
+    Bump aravis to 0.8.1 for EED build
+    Bump ADGenICam to R1.8.37-0.1.0
+ 
+
