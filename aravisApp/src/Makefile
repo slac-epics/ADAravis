@@ -28,14 +28,21 @@ endif
 
 # If glib is not in a standard place, tell the build system where to look
 ifneq ($(GLIBPREFIX),)
+	USR_INCLUDES += -I$(GLIBPREFIX)/include
 	USR_INCLUDES += -I$(GLIBPREFIX)/include/glib-2.0
     ifneq (,$(wildcard $(GLIBPREFIX)/lib64/glib-2.0))
 	# If these is a glibprefix/lib64/glib-2.0 dir then use this	    
 	USR_INCLUDES += -I$(GLIBPREFIX)/lib64/glib-2.0/include
+	gio-2.0_DIR = $(GLIBPREFIX)/lib64
+	gobject-2.0_DIR = $(GLIBPREFIX)/lib64
+	gthread-2.0_DIR = $(GLIBPREFIX)/lib64
 	glib-2.0_DIR = $(GLIBPREFIX)/lib64
     else
         # Assume it is in the lib directory
 		USR_INCLUDES += -I$(GLIBPREFIX)/lib/glib-2.0/include		
+		gio-2.0_DIR = $(GLIBPREFIX)/lib
+		gobject-2.0_DIR = $(GLIBPREFIX)/lib
+		gthread-2.0_DIR = $(GLIBPREFIX)/lib
 		glib-2.0_DIR = $(GLIBPREFIX)/lib
 	endif
 	USR_INCLUDES += -I$(GLIBPREFIX)/include
@@ -44,9 +51,8 @@ endif
 
 LIB_LIBS += ADGenICam
 
-USR_LIBS     += aravis-0.8
-
-LIB_SYS_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
+LIB_LIBS += aravis-0.8
+LIB_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
 LIB_SYS_LIBS += usb-1.0
 
 include $(TOP)/configure/RULES
