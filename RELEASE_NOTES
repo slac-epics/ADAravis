@@ -2,6 +2,8 @@
 #==============================================================
 RELEASE_NOTES for ADAravis
 #==============================================================
+R2.2.1.20-1.0.3  31-Jan-2025  J. Lorelli (lorelli)
+    Upgrade to Upgrade to aravis/0.8.33, glib/2.70.0
 
 R2.2.1.20-1.0.1  11-Jul-2023  M. Dunning (mdunning)
     Update Makefile so that external packages are used instead of system libraries
