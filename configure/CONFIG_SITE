@@ -21,6 +21,9 @@ CHECK_RELEASE = YES
 #   that Base is built for.
 #CROSS_COMPILER_TARGET_ARCHS = vxWorks-68040
 
+# We only want to build this for LinuxRT-x86_64 these days (especially not RTEMS targets)
+CROSS_COMPILER_TARGET_ARCHS = linuxRT-x86_64
+
 # To install files into a location other than $(TOP) define
 #   INSTALL_LOCATION here.
 #INSTALL_LOCATION=</path/name/to/install/top>
@@ -70,13 +73,6 @@ ifeq (lcls,$(findstring lcls,$(EPICS_BASE)))
 		BR_VERSION	= buildroot-2019.08-x86_64
 		PKG_ARCH	= $(BR_VERSION)
 	endif
-	ARAVISPREFIX	= $(PACKAGE_SITE_TOP)/aravis/0.8.1/$(PKG_ARCH)
-	GLIBPREFIX		= $(PACKAGE_SITE_TOP)/glib/2.52.0/$(PKG_ARCH)
-	FFI_TOP			= $(PACKAGE_SITE_TOP)/libffi/3.2.1/$(PKG_ARCH)
-	PCRE_TOP		= $(PACKAGE_SITE_TOP)/pcre/8.37/$(PKG_ARCH)
-	LIBUSB_TOP		= $(PSPKG_ROOT)/release/libusb/1.0.23/$(PKG_ARCH)
-	GLIBMM_TOP		= $(PSPKG_ROOT)/release/glibmm/2.40.0/$(PKG_ARCH)
-	UTIL_LINUX_TOP	= $(PSPKG_ROOT)/release/util-linux/2.37.3/$(PKG_ARCH)
 else
 	# PCDS build
 	ifeq '$(PKG_ARCH)' 'linuxRT_glibc-x86_64'
@@ -85,14 +81,19 @@ else
 	ifeq '$(PKG_ARCH)' 'linuxRT-x86_64'
 		PKG_ARCH	= rhel6-x86_64
 	endif
-
-	ARAVISPREFIX	= $(PSPKG_ROOT)/release/aravis/0.8.33/$(PKG_ARCH)
-	GLIBPREFIX		= $(PSPKG_ROOT)/release/glib/2.70.0/$(PKG_ARCH)
-	FFI_TOP			= $(PSPKG_ROOT)/release/libffi/3.2.1/$(PKG_ARCH)
-	PCRE_TOP		= $(PSPKG_ROOT)/release/pcre/8.42/$(PKG_ARCH)
-	LIBUSB_TOP		= $(PSPKG_ROOT)/release/libusb/1.0.23/$(PKG_ARCH)
-	GLIBMM_TOP		= $(PSPKG_ROOT)/release/glibmm/2.40.0/$(PKG_ARCH)
-	UTIL_LINUX_TOP	= $(PSPKG_ROOT)/release/util-linux/2.37.3/$(PKG_ARCH)
 endif
+
+ifdef T_A
+$(warning PKG_ARCH=$(PKG_ARCH))
+endif
+
+ARAVISPREFIX	= $(PSPKG_ROOT)/release/aravis/0.8.33/$(PKG_ARCH)
+GLIBPREFIX		= $(PSPKG_ROOT)/release/glib/2.70.0/$(PKG_ARCH)
+FFI_TOP			= $(PSPKG_ROOT)/release/libffi/3.2.1/$(PKG_ARCH)
+PCRE_TOP		= $(PSPKG_ROOT)/release/pcre/8.42/$(PKG_ARCH)
+LIBUSB_TOP		= $(PSPKG_ROOT)/release/libusb/1.0.23/$(PKG_ARCH)
+GLIBMM_TOP		= $(PSPKG_ROOT)/release/glibmm/2.40.0/$(PKG_ARCH)
+UTIL_LINUX_TOP	= $(PSPKG_ROOT)/release/util-linux/2.37.3/$(PKG_ARCH)
+
 FFI_LIB		= $(FFI_TOP)/lib64
 PCRE_LIB	= $(PCRE_TOP)/lib

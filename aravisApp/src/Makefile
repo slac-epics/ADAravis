@@ -49,10 +49,12 @@ ifneq ($(GLIBPREFIX),)
 	LIB_INSTALLS += $(wildcard $(glib-2.0_DIR)/lib*)
 endif
 
+usb-1.0_DIR=$(LIBUSB_TOP)/lib
+
 LIB_LIBS += ADGenICam
 
 LIB_LIBS += aravis-0.8
 LIB_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
-LIB_SYS_LIBS += usb-1.0
+LIB_LIBS += usb-1.0
 
 include $(TOP)/configure/RULES
