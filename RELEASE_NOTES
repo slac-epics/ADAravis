@@ -2,6 +2,11 @@
 #==============================================================
 RELEASE_NOTES for ADAravis
 #==============================================================
+R2.2.1.20-1.1.0  24-Oct-2025  J. Lorelli (lorelli)
+    Upgrade to glib 2.70.0, aravis 0.8.33
+    Refactor packages so they pull from $PSPKG_ROOT for all deployments
+    Make libusb pull from $PSPKG_ROOT, instead of from system-level packages
+
 R2.2.1.20-1.0.3  31-Jan-2025  J. Lorelli (lorelli)
     Upgrade to Upgrade to aravis/0.8.33, glib/2.70.0
 
