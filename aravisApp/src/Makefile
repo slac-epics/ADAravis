@@ -20,10 +20,12 @@ ifneq ($(ARAVISPREFIX),)
 	aravis-0.8_DIR = $(ARAVISPREFIX)/lib64
     else
         # Assume it is in the lib directory
-	aravis-0.8_DIR = $(ARAVISPREFIX)/lib
+		aravis-0.8_DIR = $(ARAVISPREFIX)/lib
 	endif
-	LIB_INSTALLS += $(wildcard $(aravis-0.8_DIR)/lib*)
-	BIN_INSTALLS += $(wildcard $(ARAVISPREFIX)/bin/*)
+	ifneq ($(USE_SYSTEM_LIBS),YES)
+		LIB_INSTALLS += $(wildcard $(aravis-0.8_DIR)/lib*)
+		BIN_INSTALLS += $(wildcard $(ARAVISPREFIX)/bin/*)
+	endif
 endif
 
 # If glib is not in a standard place, tell the build system where to look
@@ -45,18 +47,20 @@ ifneq ($(GLIBPREFIX),)
 		gthread-2.0_DIR = $(GLIBPREFIX)/lib
 		glib-2.0_DIR = $(GLIBPREFIX)/lib
 	endif
-	USR_INCLUDES += -I$(GLIBPREFIX)/include
-	LIB_INSTALLS += $(wildcard $(glib-2.0_DIR)/lib*)
+	ifneq ($(USE_SYSTEM_LIBS),YES)
+		USR_INCLUDES += -I$(GLIBPREFIX)/include
+		LIB_INSTALLS += $(wildcard $(glib-2.0_DIR)/lib*)
+	endif
 endif
 
 LIB_LIBS += ADGenICam
 
 ifeq ($(USE_SYSTEM_LIBS),YES)
-LIB_SYS_LIBS += aravis-0.8
-LIB_SYS_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
+	LIB_SYS_LIBS += aravis-0.8
+	LIB_SYS_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
 else
-LIB_LIBS += aravis-0.8
-LIB_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
+	LIB_LIBS += aravis-0.8
+	LIB_LIBS += gio-2.0 gobject-2.0 gthread-2.0 glib-2.0
 endif
 
 LIB_SYS_LIBS += usb-1.0
