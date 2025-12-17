@@ -2,6 +2,9 @@
 #==============================================================
 RELEASE_NOTES for ADAravis
 #==============================================================
+R2.2.1.20-1.0.4  17-Dec-2025  J. Lorelli (lorelli)
+	Add USE_SYSTEM_LIBS to allow linking against system level libraries
+
 R2.2.1.20-1.0.3  31-Jan-2025  J. Lorelli (lorelli)
     Upgrade to Upgrade to aravis/0.8.33, glib/2.70.0
 
