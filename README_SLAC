@@ -1,0 +1,20 @@
+SLAC-specific Changes to ADAravis
+---------------------------------
+
+Makefile Changes
+----------------
+
+Makefiles were changed to use libraries from $(PACKAGE_SITE_TOP) or
+$(PSPKG_ROOT), depending on the deployment environment.
+
+To disable this behavior and link to system libraries, use
+
+  USE_SYSTEM_LIBS=YES
+
+In your configure/CONFIG_SITE. Setting this to YES matches the
+behavior of ADAravis as it was designed upstream.
+
+Alternatively, you can set USE_SYSTEM_LIBS on the command line:
+
+  make USE_SYSTEM_LIBS=YES
+
